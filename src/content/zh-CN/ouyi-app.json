@@ -1,0 +1,93 @@
+{
+  "navLabel": "APP下载",
+  "children": [
+    {
+      "label": "安卓APK下载",
+      "desc": "华为/小米/OPPO全系兼容 · APK直装",
+      "href": "/ouyi-app/android",
+      "icon": "android"
+    },
+    {
+      "label": "苹果iOS版",
+      "desc": "App Store · TestFlight · 需注册欧意账号",
+      "href": "/ouyi-app/ios",
+      "icon": "ios"
+    }
+  ],
+  "metadata": {
+    "title": "欧意APP下载 | 欧易(OKX)安卓/iOS最新官方安装包 {year}",
+    "description": "欧意(OKX)APP官方下载页。提供欧意安卓APK直装包、苹果iOS下载指引及电脑版客户端，{year}年最新版本，安全可验证。"
+  },
+  "hero": {
+    "title": "欧意APP下载 - {year}最新版",
+    "subtitle": "欧意(OKX)全平台客户端 | 安卓 APK 直装 | iOS 苹果版 | Windows / macOS 电脑版",
+    "cta": "立即下载欧意APP",
+    "useGateway": true
+  },
+  "intro": {
+    "title": "欧意(OKX)APP下载说明",
+    "content": [
+      "<strong>欧意(OKX)</strong> 即原OKEX，提供安卓、iOS 及电脑版三端客户端。安卓用户可直接下载官方 APK 安装包，无需通过应用商店，一键安装即可使用。",
+      "苹果 iOS 用户需通过<strong> App Store</strong> 搜索「OKX」下载，中国区账号需先切换至境外 Apple ID（本文有详细步骤）。电脑版支持 Windows 与 macOS，提供与手机端完全同步的账户功能。"
+    ]
+  },
+  "seoArticle": {
+    "title": "欧意APP下载全平台安装教程",
+    "sections": [
+      {
+        "heading": "一、安卓版欧意APP下载（APK直装）",
+        "content": "<p>欧意安卓版支持 APK 直装，无需在国内应用商店搜索（因平台已下架）。</p><ol><li>点击本页「立即下载」按钮，跳转至欧意官网下载专区。</li><li>选择「Android APK」选项，下载安装包（约 80-100MB）。</li><li>手机设置 → 安全 → 开启「允许未知来源应用安装」。</li><li>找到下载好的 APK 文件，点击安装，全程约 1 分钟。</li><li>安装完成后打开，使用原 OKEX / 殴易账号直接登录即可。</li></ol>"
+      },
+      {
+        "heading": "二、苹果iOS版欧意APP下载",
+        "content": "<p>iOS 版<strong>欧意(OKX)APP</strong> 已上架境外 App Store，中国区账号需切换账号后下载。</p><ol><li>退出当前 Apple ID（设置 → iTunes Store 与 App Store → 点击账户 → 退出）。</li><li>使用境外（如香港、美国）Apple ID 重新登录。</li><li>打开 App Store 搜索「OKX」，找到蓝色图标的官方应用点击下载。</li><li>下载完成后切回国内 Apple ID，APP 内登录原欧意账号即可正常使用。</li></ol>"
+      },
+      {
+        "heading": "三、电脑版欧意APP下载（Windows / macOS）",
+        "content": "<p><strong>欧意(OKX)电脑版</strong>支持 Windows 10/11 及 macOS 11 以上系统。</p><ol><li>访问欧意官网，顶部菜单点击「下载」→「电脑客户端」。</li><li>根据系统选择对应版本（.exe 或 .dmg）。</li><li>下载后双击安装程序，按提示完成安装（约 2 分钟）。</li><li>启动软件，使用原账号登录，所有资产与手机端实时同步。</li></ol>"
+      }
+    ]
+  },
+  "features": {
+    "title": "欧意APP四大核心功能",
+    "items": [
+      {
+        "title": "现货与合约交易",
+        "description": "支持 300+ 交易对，提供<strong>欧意</strong>现货、永续合约、交割合约及期权，专业交易者与新手均可上手。"
+      },
+      {
+        "title": "内置 Web3 钱包",
+        "description": "<strong>欧意(OKX)</strong> APP 内置 Web3 多链钱包，支持 ETH、BTC、Sol 等 70+ 链，无需切换应用即可管理链上资产。"
+      },
+      {
+        "title": "稳定的连接线路",
+        "description": "欧意 APP 内置多节点线路自动切换，即使网络受限，也能保障稳定连接，不因行情波动错失交易时机。"
+      },
+      {
+        "title": "账户安全保障",
+        "description": "<strong>欧意</strong>提供 Google 验证码、资金密码、人脸识别等多重安全机制，保障您的账户与资产安全。"
+      }
+    ]
+  },
+  "faq": {
+    "title": "欧意APP下载常见问题",
+    "items": [
+      {
+        "question": "欧意APP和OKX APP是同一个吗？",
+        "answer": "是的，<strong>欧意 APP</strong> 就是 <strong>OKX APP</strong>，是同一款应用程序的两种叫法。在 App Store 和各应用市场，统一以「OKX」名称上架。"
+      },
+      {
+        "question": "安卓下载的APK包安全吗？会不会有病毒？",
+        "answer": "只要从<strong>欧意(OKX)官网</strong>或本站提供的官方链接下载，APK 包即为官方签名版本，安全可验证。请勿从第三方网站或社交媒体群组获取安装包，以防钓鱼风险。"
+      },
+      {
+        "question": "国内苹果手机没有境外Apple ID怎么办？",
+        "answer": "您可以自行注册一个免费的香港或美国 Apple ID，全程约 10 分钟，本站「iOS下载」页面有详细的图文注册教程。"
+      },
+      {
+        "question": "下载后用原来OKEX的账号能直接登录吗？",
+        "answer": "<strong>可以。</strong>欧意(OKX)是 OKEX 品牌升级，所有老账号直接登录，无需重新注册，资产和记录不受影响。"
+      }
+    ]
+  }
+}

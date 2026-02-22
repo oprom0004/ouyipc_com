@@ -1,0 +1,74 @@
+{
+  "navLabel": "首页",
+  "metadata": {
+    "title": "欧意交易所官方入口 | OKX APP下载与注册 {year}最新",
+    "description": "欧意(OKX)官方访问入口。提供欧意交易所最新APP下载(安卓/iOS)、电脑版客户端及注册教程。欧意即OKX，原OKEX，全球顶级加密货币交易平台。"
+  },
+  "jsonLd": {
+    "name": "欧意(OKX)官方入口",
+    "url": "https://ouyijiaoyisuo.org",
+    "description": "欧意交易所官方访问入口，提供APP下载、注册教程及最新官网线路"
+  },
+  "hero": {
+    "title": "欧意交易所官方入口",
+    "subtitle": "欧意(OKX) | 原OKEX | 安卓 / iOS / 电脑版安全下载 | 官方认证线路直达",
+    "cta": "进入欧意官网"
+  },
+  "intro": {
+    "title": "欧意(OKX)是什么平台？",
+    "content": [
+      "<strong>欧意</strong>，即 <strong>OKX</strong>（前身为 OKEx / OKEX），是全球交易量前三的综合型数字资产交易平台。平台支持现货、合约、期权等主流品种，同时内置 Web3 多链钱包，支持链上 DEX 聚合兑换与 DeFi 收益管理。",
+      "无论您是搜索 <strong>殴易</strong>、<strong>欧易</strong>、<strong>易欧</strong> 还是 <strong>OKEX</strong>，指向的都是同一个平台——本站提供欧意最新官方线路与全平台客户端下载，适用于安卓、iOS 及 Windows / macOS 用户。"
+    ]
+  },
+  "features": {
+    "title": "为什么选择欧意(OKX)？",
+    "items": [
+      {
+        "title": "老账户直接可用",
+        "description": "原 <strong>OKEX / 殴易</strong> 账号（手机号或邮箱）无需重新注册，直接在欧意官网或 APP 登录，资产余额与历史记录完整保留。"
+      },
+      {
+        "title": "储备金透明可查",
+        "description": "<strong>欧意(OKX)</strong> 每月公示储备金证明（PoR），采用 zk-STARK 零知识证明技术，用户可独立核验自身资产是否 1:1 托管。"
+      },
+      {
+        "title": "CeFi + DeFi 一站通",
+        "description": "欧意 APP 内置 Web3 多链钱包，支持链上 DEX 兑换、NFT 市场和 DeFi 收益，一个账号打通中心化交易与去中心化资产管理。"
+      },
+      {
+        "title": "全球合规持续推进",
+        "description": "<strong>欧意</strong> 已在迪拜、巴哈马等地取得数字资产服务牌照，并积极推进香港 VASP 申请，合规护航用户资金安全。"
+      }
+    ]
+  },
+  "section3": {
+    "title": "{year}年欧意(OKX)最新动态",
+    "content": "<strong>欧意(OKX)</strong> 自研 X Layer 公链（兼容以太坊 EVM）已全面上线，为开发者提供高性能链上基础设施。OKB 平台币保持季度回购销毁机制，流通量持续收缩。当前欧意 APP 已覆盖 100+ 国家和地区，日活跃用户超千万，是全球华人用户最多的加密货币交易平台之一。"
+  },
+  "faq": {
+    "title": "关于欧意(OKX)的常见问题",
+    "items": [
+      {
+        "question": "欧意和 OKX、殴易、欧易、易欧、OKEX 是同一个吗？",
+        "answer": "是的，<strong>欧意、OKX、殴易、欧易、易欧、OKEX、OKEx</strong> 均指同一家公司旗下的同一个交易平台，只是不同用户群体的称呼习惯不同。本站同时收录所有相关词，方便您准确找到官方入口。"
+      },
+      {
+        "question": "欧意(OKX)官网打不开怎么办？",
+        "answer": "受网络环境影响，<strong>欧意(OKX)</strong> 官网在部分地区可能访问不稳定。建议优先使用本站提供的最新官方线路直达，或下载<strong>欧意 APP 客户端</strong>（内置多节点自动切换），APP 端连接稳定性通常优于网页浏览器。"
+      },
+      {
+        "question": "原来在 OKEX / 殴易的账号还能用吗？",
+        "answer": "<strong>完全可以。</strong>欧意(OKX) 是品牌升级，不是平台迁移。您原来的 OKEX / 殴易账号（手机号或邮箱）直接在欧意官网或 APP 登录即可，资产余额与交易记录100%保留。"
+      },
+      {
+        "question": "欧意(OKX)支持哪些设备下载？",
+        "answer": "欧意(OKX) 支持 <strong>安卓（APK 直装）、苹果 iOS（App Store）、Windows 电脑版、macOS 电脑版</strong>，以及网页版直接访问，覆盖所有主流设备。"
+      },
+      {
+        "question": "欧意(OKX)注册需要实名认证吗？",
+        "answer": "基础注册仅需手机号或邮箱，<strong>无需实名</strong>即可完成注册并进行小额交易。提升提现额度或使用法币出入金功能时，需完成 KYC 认证（上传身份证或护照）。"
+      }
+    ]
+  }
+}

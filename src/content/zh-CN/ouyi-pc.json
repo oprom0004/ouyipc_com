@@ -1,0 +1,58 @@
+{
+  "navLabel": "电脑版",
+  "metadata": {
+    "title": "欧意电脑版下载 | 欧易(OKX)Win/Mac客户端 {year}最新",
+    "description": "欧意(OKX)电脑客户端官方下载。支持Windows 10/11及macOS，提供完整的现货、合约交易功能，大屏操作更高效。"
+  },
+  "hero": {
+    "title": "欧意电脑版下载 - Win/Mac客户端",
+    "subtitle": "欧意(OKX)官方桌面端 | Windows 10/11 + macOS | 支持多屏行情与专业K线工具",
+    "cta": "下载欧意电脑版",
+    "useGateway": true
+  },
+  "intro": {
+    "title": "欧意电脑客户端介绍",
+    "content": [
+      "<strong>欧意(OKX)电脑版</strong>是面向 Windows 与 macOS 用户推出的桌面端交易客户端，提供与网页版完全同步的账户功能，同时支持多窗口行情、专业 K 线图表及快捷键交易。",
+      "相比手机端，<strong>欧意电脑版</strong>在大屏幕上展示的交易深度图、指标叠加和订单管理面板更为直观，适合需要长期盯盘的活跃交易者和量化用户使用。"
+    ]
+  },
+  "features": {
+    "title": "欧意电脑版核心优势",
+    "items": [
+      {
+        "title": "专业K线与多指标支持",
+        "description": "<strong>欧意电脑版</strong>内置 TradingView 图表，支持 MA、MACD、RSI、布林带等 100+ 技术指标叠加，自定义布局一键保存，适合技术派交易者。"
+      },
+      {
+        "title": "多窗口多屏管理",
+        "description": "欧意桌面端支持拖拽分屏，可同时监控多个交易对的实时行情，避免在手机端频繁切换的不便，适合多品种套利策略。"
+      },
+      {
+        "title": "账户与手机端实时同步",
+        "description": "<strong>欧意(OKX)</strong>全平台账户实时同步，电脑端、手机端、网页端随时切换，仓位、挂单、资产余额完全一致。"
+      },
+      {
+        "title": "API 接入便捷",
+        "description": "量化交易者可通过<strong>欧意</strong>开放 API（REST + WebSocket）连接电脑端，快速接入自动化交易策略，延迟低至毫秒级。"
+      }
+    ]
+  },
+  "faq": {
+    "title": "欧意电脑版常见问题",
+    "items": [
+      {
+        "question": "欧意电脑版和网页版有什么区别？",
+        "answer": "<strong>欧意电脑版（客户端）</strong>在离线状态下仍可保持应用运行，支持系统级别的消息推送与快捷键操作；网页版通过浏览器访问，无需安装但功能稍受限。日常交易两者差异不大，重度用户和量化用户建议使用客户端。"
+      },
+      {
+        "question": "欧意电脑版支持哪些操作系统？",
+        "answer": "<strong>欧意(OKX)电脑版</strong>支持 Windows 10 / 11（64位）和 macOS 11（Big Sur）及以上版本，不支持 32 位 Windows 系统。"
+      },
+      {
+        "question": "欧意电脑版的账号和手机APP是同一个吗？",
+        "answer": "是的，<strong>欧意全平台共用同一账号体系</strong>。电脑版、手机 APP、网页端使用同一个手机号或邮箱登录，资产和所有操作记录实时同步。"
+      }
+    ]
+  }
+}

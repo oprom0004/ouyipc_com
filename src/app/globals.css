@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ─────────────────────────────── */
+:root {
+    --bg-base: #04080f;
+    --bg-surface: #080f1e;
+    --bg-card: rgba(13, 22, 45, 0.7);
+    --border: rgba(56, 100, 200, 0.18);
+    --border-glow: rgba(56, 142, 229, 0.45);
+    --accent-1: #2563eb;
+    --accent-2: #06b6d4;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+}
+
+/* ─── Base ──────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Inter', "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar ─────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e3a5f;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+}
+
+/* ─── Gradient Utilities ────────────────────────── */
+.gradient-text {
+    background: linear-gradient(135deg, #ffffff 0%, #93c5fd 50%, #67e8f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.gradient-border {
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 0 0 0 1px var(--border);
+}
+
+/* ─── Glass Card ────────────────────────────────── */
+.glass {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border);
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.glass:hover {
+    border-color: var(--border-glow);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.12), 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ─── Glow Button ───────────────────────────────── */
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #3b82f6, #22d3ee);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* ─── Section Divider ───────────────────────────── */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    padding-left: 1rem;
+    border-left: 3px solid;
+    border-image: linear-gradient(to bottom, #2563eb, #06b6d4) 1;
+    letter-spacing: -0.01em;
+}
+
+/* ─── Ambient Orbs (hero background) ───────────── */
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ─── Content Typography ────────────────────────── */
+.content-area strong {
+    color: #93c5fd;
+    font-weight: 600;
+}
+
+.content-area p {
+    margin-bottom: 1.5em;
+    line-height: 1.85;
+}
+
+.content-area ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.content-area li {
+    margin-bottom: 0.6em;
+}
+
+/* ─── Animated gradient border on card hover ────── */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.shine-border::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.5), rgba(6, 182, 212, 0.4), transparent);
+    background-size: 300% 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    animation: shimmer 2s linear infinite;
+    z-index: -1;
+}
+
+.shine-border:hover::after {
+    opacity: 1;
+}

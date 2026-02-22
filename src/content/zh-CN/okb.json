@@ -1,0 +1,58 @@
+{
+  "navLabel": "OKB生态",
+  "metadata": {
+    "title": "OKB币介绍 | 欧意(OKX)平台币OKB用途与购买教程 {year}",
+    "description": "欧意(OKX)平台币OKB全面介绍。OKB用途、手续费折扣、季度销毁机制、X Layer生态应用及购买方式，{year}年最新详解。"
+  },
+  "hero": {
+    "title": "OKB - 欧意(OKX)平台币介绍",
+    "subtitle": "OKB 用途与权益 | 手续费折扣 | 季度销毁 | X Layer生态 | 欧意专属平台通证",
+    "cta": "在欧意购买OKB",
+    "useGateway": true
+  },
+  "intro": {
+    "title": "OKB是什么？",
+    "content": [
+      "<strong>OKB</strong> 是<strong>欧意(OKX)</strong>发行的官方平台通证（Platform Token），于 2019 年上线，总量 3 亿枚，采用季度性回购销毁机制，流通量持续递减。持有 OKB 的<strong>欧意</strong>用户可享受交易手续费折扣、平台活动优先参与权及 X Layer 生态权益。",
+      "与部分交易所平台币不同，<strong>OKB</strong> 还是欧意自研 L2 网络 <strong>X Layer</strong>（兼容以太坊 EVM）的原生 Gas Token，在链上原生应用中具备真实使用价值。"
+    ]
+  },
+  "features": {
+    "title": "持有OKB的核心权益",
+    "items": [
+      {
+        "title": "手续费折扣",
+        "description": "在<strong>欧意(OKX)</strong>持有 OKB 并达到对应数量阈值，现货与合约交易手续费可享受最高 40% 折扣，长期活跃交易者省费效果显著。"
+      },
+      {
+        "title": "季度回购销毁",
+        "description": "<strong>欧意</strong>每季度使用平台营收的一定比例在二级市场回购 OKB 并永久销毁，总流通量逐年递减，形成通缩效应，长线持有者受益。"
+      },
+      {
+        "title": "X Layer 生态 Gas Token",
+        "description": "OKB 是欧意自研 L2 网络 <strong>X Layer</strong> 的原生 Gas 通证。在 X Layer 上进行链上操作（DApp 交互、合约部署）需消耗 OKB，赋予平台币真实链上使用价值。"
+      },
+      {
+        "title": "活动优先权与空投资格",
+        "description": "<strong>欧意(OKX)</strong>举办新项目 IEO（首次交易所发行）、空投及专属活动时，持有 OKB 的用户通常享有参与优先权或额外分配权重。"
+      }
+    ]
+  },
+  "faq": {
+    "title": "OKB常见问题",
+    "items": [
+      {
+        "question": "OKB在哪里可以买到？",
+        "answer": "<strong>OKB</strong> 可直接在<strong>欧意(OKX)</strong>交易所购买，支持 USDT、BTC、ETH 等主流币种兑换。进入欧意官网或 APP，搜索「OKB/USDT」交易对即可交易。"
+      },
+      {
+        "question": "持有多少OKB才能享受手续费折扣？",
+        "answer": "<strong>欧意(OKX)</strong>按持仓量设置不同折扣等级，最低持有一定数量的 OKB 即可获得初级折扣，具体档位以欧意官网费率页面当期规则为准（规则可能随市场调整）。"
+      },
+      {
+        "question": "OKB和比特币、以太坊有什么区别？",
+        "answer": "<strong>OKB</strong> 是<strong>欧意交易所</strong>发行的平台权益通证，属于交易所代币（Exchange Token）类别，与 BTC（点对点支付）、ETH（智能合约平台）的定位不同。OKB 的价值主要与欧意平台的使用量、回购销毁进度和 X Layer 生态扩张挂钩。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+    "brand": "欧意",
+    "brandFull": "欧意(OKX)",
+    "domain": "https://ouyijiaoyisuo.org",
+    "tagline": "欧意(OKX)官方中文入口，提供欧意APP下载、账号注册及最新官网地址直达。",
+    "primaryCta": {
+        "label": "进入欧意官网",
+        "href": "/ouyi-zhuce"
+    },
+    "nav": [
+        {
+            "label": "首页",
+            "href": "/"
+        },
+        {
+            "label": "APP下载",
+            "href": "/ouyi-app",
+            "children": [
+                {
+                    "label": "安卓下载",
+                    "href": "/ouyi-app/android"
+                },
+                {
+                    "label": "苹果iOS",
+                    "href": "/ouyi-app/ios"
+                }
+            ]
+        },
+        {
+            "label": "网页版",
+            "href": "/ouyi-web"
+        },
+        {
+            "label": "电脑版",
+            "href": "/ouyi-pc"
+        },
+        {
+            "label": "Web3钱包",
+            "href": "/ouyi-wallet"
+        },
+        {
+            "label": "OKB",
+            "href": "/okb"
+        },
+        {
+            "label": "关于欧意",
+            "href": "/ouyi-jiaoyisuo"
+        }
+    ],
+    "footerNav": {
+        "product": [
+            {
+                "name": "欧意APP下载",
+                "href": "/ouyi-app"
+            },
+            {
+                "name": "Web3 钱包",
+                "href": "/ouyi-wallet"
+            },
+            {
+                "name": "电脑版客户端",
+                "href": "/ouyi-pc"
+            },
+            {
+                "name": "网页版登录",
+                "href": "/ouyi-web"
+            }
+        ],
+        "support": [
+            {
+                "name": "注册教程",
+                "href": "/ouyi-zhuce"
+            },
+            {
+                "name": "下载中心",
+                "href": "/ouyi-xiazai"
+            },
+            {
+                "name": "关于欧意交易所",
+                "href": "/ouyi-jiaoyisuo"
+            },
+            {
+                "name": "OKB 生态",
+                "href": "/okb"
+            }
+        ]
+    },
+    "quickLinks": {
+        "android": {
+            "href": "/ouyi-app/android",
+            "label": "Android APK下载",
+            "sub": "官方正版 · 极速安装"
+        },
+        "ios": {
+            "href": "/ouyi-app/ios",
+            "label": "下载欧意iOS版",
+            "sub": "海外Apple ID · 快速获取"
+        },
+        "downloadCenter": {
+            "href": "/ouyi-xiazai"
+        },
+        "web": {
+            "href": "/ouyi-web",
+            "label": "网页版登录",
+            "sub": "浏览器直达 · 免安装"
+        },
+        "pc": {
+            "href": "/ouyi-pc",
+            "label": "电脑客户端",
+            "sub": "Windows / macOS"
+        },
+        "wallet": {
+            "href": "/ouyi-wallet",
+            "label": "Web3钱包",
+            "sub": "去中心化 · 多链聚合"
+        },
+        "register": {
+            "href": "/ouyi-zhuce",
+            "label": "注册领奖励",
+            "sub": "新手专享 · 先领后投"
+        },
+        "okb": {
+            "href": "/okb",
+            "label": "OKB生态",
+            "sub": "平台币 · X Layer"
+        },
+        "about": {
+            "href": "/ouyi-jiaoyisuo",
+            "label": "关于欧意交易所",
+            "sub": "平台介绍 · 安全合规"
+        }
+    }
+}

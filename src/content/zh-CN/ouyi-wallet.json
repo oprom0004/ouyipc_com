@@ -1,0 +1,62 @@
+{
+  "navLabel": "Web3钱包",
+  "metadata": {
+    "title": "欧意Web3钱包 | 欧易(OKX)去中心化钱包使用指南 {year}",
+    "description": "欧意(OKX)内置Web3多链钱包，支持70+区块链，管理BTC/ETH/Sol等链上资产，连接DeFi、NFT市场无需切换应用。"
+  },
+  "hero": {
+    "title": "欧意Web3钱包 - 多链资产管理",
+    "subtitle": "欧意(OKX)内置非托管钱包 | 支持70+主流区块链 | DeFi / NFT / DEX 一站管理",
+    "cta": "开启欧意Web3钱包",
+    "useGateway": true
+  },
+  "intro": {
+    "title": "欧意Web3钱包是什么？",
+    "content": [
+      "<strong>欧意(OKX)Web3钱包</strong>是集成在欧意 APP 和网页端内的非托管（自托管）多链钱包，私钥由用户独立掌控，欧意平台无法访问。钱包支持 70+ 条区块链，包括以太坊、BTC、Solana、Polygon、BSC、Avalanche 等主流公链。",
+      "与独立钱包（如 MetaMask）相比，<strong>欧意Web3钱包</strong>无需切换 APP 即可在 CeFi（中心化交易）和 DeFi（去中心化协议）之间无缝流转资产，极大降低了操作门槛和 Gas 成本。"
+    ]
+  },
+  "features": {
+    "title": "欧意Web3钱包核心功能",
+    "items": [
+      {
+        "title": "非托管 · 私钥自掌控",
+        "description": "<strong>欧意Web3钱包</strong>使用 MPC（多方计算）技术，助记词和私钥由用户独立持有，欧意平台无法查看或动用您的钱包资产。"
+      },
+      {
+        "title": "70+ 链跨链兑换",
+        "description": "内置 DEX 聚合器，支持以太坊、BSC、Solana 等 70+ 链之间的跨链兑换，自动寻找最优汇率路径，Gas 费用透明显示。"
+      },
+      {
+        "title": "DeFi 收益一键管理",
+        "description": "通过<strong>欧意Web3钱包</strong>可一键接入 Aave、Compound、Lido 等主流 DeFi 协议，无需离开 APP 即可完成流动性挖矿和质押操作。"
+      },
+      {
+        "title": "NFT 市场与展示",
+        "description": "<strong>欧意(OKX)NFT市场</strong>与钱包深度整合，支持多链 NFT 查看、购买、出售，并提供 NFT 价格分析工具。"
+      }
+    ]
+  },
+  "faq": {
+    "title": "欧意Web3钱包常见问题",
+    "items": [
+      {
+        "question": "欧意Web3钱包和普通欧意账户有什么区别？",
+        "answer": "<strong>普通欧意账户</strong>是中心化托管账户（CEX），资产由欧意保管；<strong>欧意Web3钱包</strong>是非托管钱包（DeFi），私钥完全由您掌控，欧意无法动用。两者并列存在于同一个 APP 内，方便在 CeFi 与 DeFi 之间转移资产。"
+      },
+      {
+        "question": "欧意Web3钱包支持哪些主流区块链？",
+        "answer": "支持 70+ 条链，包括：<strong>以太坊（ETH）、BTC、Solana（SOL）、BNB Smart Chain、Polygon、Avalanche、Arbitrum、Optimism</strong> 等几乎所有主流公链及 Layer2 网络。"
+      },
+      {
+        "question": "忘记了欧意Web3钱包助记词怎么办？",
+        "answer": "助记词一旦丢失<strong>无法找回</strong>，这是去中心化钱包的特性。<strong>欧意(OKX)</strong>建议用户在创建钱包时将 12 个助记词抄写在纸上，存放在安全位置（离线保存，不要截图或存入网盘）。"
+      },
+      {
+        "question": "欧意Web3钱包的手续费由谁决定？",
+        "answer": "链上交易产生的 Gas 费用由对应区块链网络收取，<strong>欧意</strong>平台本身不额外收取 Gas 费。DEX 聚合兑换时，欧意会自动为您寻找当前 Gas 最低的兑换路径。"
+      }
+    ]
+  }
+}
