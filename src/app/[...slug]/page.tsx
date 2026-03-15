@@ -10,7 +10,7 @@ export function generateMetadata({ params }: { params: { slug: string[] } }): Me
             title: content.metadata?.title || '欧易',
             description: content.metadata?.description || '',
             alternates: {
-                canonical: `https://ouyijiaoyisuo.org/${params.slug.join('/')}/`,
+                canonical: `https://ouyipc.com/${params.slug.join('/')}/`,
             },
         };
     } catch {

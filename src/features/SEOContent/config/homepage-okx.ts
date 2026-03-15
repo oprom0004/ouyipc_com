@@ -7,7 +7,7 @@ export const homepageContent: PageSEOContent = {
     },
     jsonLd: {
         name: 'OKEX入口官方站',
-        url: 'https://xuuaph.cn',
+        url: 'https://ouyipc.com',
         description: '2026最新OKX交易所官方网址入口与APP下载指南',
     },
     hero: {

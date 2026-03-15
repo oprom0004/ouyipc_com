@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
         title: homepage.metadata.title,
         description: homepage.metadata.description,
         alternates: {
-            canonical: 'https://ouyijiaoyisuo.org/',
+            canonical: 'https://ouyipc.com/',
         },
     };
 }

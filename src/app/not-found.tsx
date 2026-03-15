@@ -23,9 +23,6 @@ export default function NotFound() {
                     >
                         返回欧易首页
                     </Link>
-                    <Link href="/ouyi-app" className="text-sm font-semibold text-white hover:text-blue-400">
-                        下载欧易APP <span aria-hidden="true">&rarr;</span>
-                    </Link>
                 </div>
             </div>
         </div>

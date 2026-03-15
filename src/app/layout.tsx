@@ -10,7 +10,7 @@ import { GatewayTrigger } from '@/features/DownloadGateway/GatewayContext';
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ouyijiaoyisuo.org'),
+  metadataBase: new URL('https://ouyipc.com'),
   alternates: {
     canonical: '/',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'zh_CN',
-    url: 'https://ouyijiaoyisuo.org',
+    url: 'https://ouyipc.com',
     siteName: '欧易(OKX)下载中心',
     title: '欧易OKX下载中心 | 欧易交易所网页版/APP/电脑版官方下载',
     description: '欧易(OKX)官方中文入口，为您提供欧易交易所电脑版及手机版最新官方下载链接。',

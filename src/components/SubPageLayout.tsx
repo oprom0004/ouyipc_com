@@ -60,7 +60,7 @@ export function SubPageLayout({ content, ctaHref = "/zhuce", breadcrumbs, slug }
     }
 
     // ── Schema.org 结构化数据 ────
-    const domain = 'https://ouyijiaoyisuo.org';
+    const domain = 'https://ouyipc.com';
     const pagePath = slug ? `/${slug.join('/')}/` : '/';
     const schemaWebPage = {
         '@context': 'https://schema.org',
