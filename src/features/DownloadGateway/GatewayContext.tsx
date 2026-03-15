@@ -37,12 +37,13 @@ export function useGateway() {
 
 interface GatewayTriggerProps {
     children: ReactNode;
-    className?: string; // Allow custom styling
-    asChild?: boolean; // Currently not implemented fully, but good for future compatibility
+    className?: string;
+    style?: React.CSSProperties; // Add support for inline styles
+    asChild?: boolean;
     onClick?: (e: React.MouseEvent) => void;
 }
 
-export function GatewayTrigger({ children, className, onClick, ...props }: GatewayTriggerProps) {
+export function GatewayTrigger({ children, className, style, onClick, ...props }: GatewayTriggerProps) {
     const { openGateway } = useGateway();
 
     const handleClick = (e: React.MouseEvent) => {
@@ -51,7 +52,7 @@ export function GatewayTrigger({ children, className, onClick, ...props }: Gatew
     };
 
     return (
-        <button className={className} onClick={handleClick} {...props}>
+        <button className={className} style={style} onClick={handleClick} {...props}>
             {children}
         </button>
     );

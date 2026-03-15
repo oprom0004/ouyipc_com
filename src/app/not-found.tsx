@@ -21,10 +21,10 @@ export default function NotFound() {
                         href="/"
                         className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     >
-                        返回欧意首页
+                        返回欧易首页
                     </Link>
                     <Link href="/ouyi-app" className="text-sm font-semibold text-white hover:text-blue-400">
-                        下载欧意APP <span aria-hidden="true">&rarr;</span>
+                        下载欧易APP <span aria-hidden="true">&rarr;</span>
                     </Link>
                 </div>
             </div>

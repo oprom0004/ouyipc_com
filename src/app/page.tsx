@@ -37,7 +37,7 @@ export default function HomePage() {
                 title={homepage.hero.title}
                 subtitle={homepage.hero.subtitle}
                 cta={homepage.hero.cta}
-                ctaHref="/ouyi-zhuce"
+                ctaHref="/zhuce"
                 useGateway={true}
             />
 
@@ -52,7 +52,7 @@ export default function HomePage() {
                             border: '1px solid rgba(37,99,235,0.12)',
                         }}
                     >
-                        {homepage.intro.content.map((p, i) => (
+                        {homepage.intro.content.map((p: string, i: number) => (
                             <p key={i} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: p }} />
                         ))}
                     </div>
@@ -119,7 +119,7 @@ export default function HomePage() {
                 <div className="max-w-4xl mx-auto px-5">
                     <h2 className="section-title mb-8 text-2xl">{homepage.faq.title}</h2>
                     <div className="space-y-3">
-                        {homepage.faq.items.map((faq, index) => (
+                        {homepage.faq.items.map((faq: { question: string; answer: string }, index: number) => (
                             <details
                                 key={index}
                                 className="group rounded-2xl overflow-hidden"

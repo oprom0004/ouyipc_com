@@ -11,27 +11,27 @@ const sections = [
         title: '安卓版',
         icon: Smartphone,
         links: [
-            { href: '/ouyi-app/android', label: 'Android APK下载', sub: '官方正版 · 极速安装', icon: Download, accent: '#22c55e' },
+            { href: '/app/anzhuo', label: '欧易安卓版', sub: '官方正版 · 极速安装', icon: Download, accent: '#22c55e' },
         ],
     },
     {
         title: '苹果 iOS',
         icon: Apple,
         links: [
-            { href: '/ouyi-app/ios', label: 'iOS下载指引', sub: '海外Apple ID · 快速获取', icon: Apple, accent: '#a78bfa' },
+            { href: '/app/ios', label: 'iOS下载指引', sub: '海外Apple ID · 快速获取', icon: Apple, accent: '#a78bfa' },
         ],
     },
     {
-        title: '欧意平台 · 下载中心',
-        href: '/ouyi-xiazai',
+        title: '欧易平台 · 下载中心',
+        href: '/xiazai',
         icon: Download,
         links: [
-            { href: '/ouyi-web', label: '网页版登录', sub: '浏览器直达 · 免安装', icon: Globe, accent: '#38bdf8' },
-            { href: '/ouyi-pc', label: '电脑客户端', sub: 'Windows / macOS', icon: Monitor, accent: '#60a5fa' },
-            { href: '/ouyi-wallet', label: 'Web3钱包', sub: '去中心化 · 多链聚合', icon: Wallet, accent: '#f59e0b' },
-            { href: '/ouyi-zhuce', label: '注册领奖励', sub: '新手专享 · 先领后投', icon: UserPlus, accent: '#34d399' },
+            { href: '/web', label: '网页版登录', sub: '浏览器直达 · 免安装', icon: Globe, accent: '#38bdf8' },
+            { href: '/xiazai', label: '电脑客户端', sub: 'Windows / macOS', icon: Monitor, accent: '#60a5fa' },
+            { href: '/qianbao', label: 'Web3钱包', sub: '去中心化 · 多链聚合', icon: Wallet, accent: '#f59e0b' },
+            { href: '/zhuce', label: '注册领奖励', sub: '新手专享 · 先领后投', icon: UserPlus, accent: '#34d399' },
             { href: '/okb', label: 'OKB生态', sub: '平台币 · X Layer', icon: Coins, accent: '#fb923c' },
-            { href: '/ouyi-jiaoyisuo', label: '关于欧意交易所', sub: '平台介绍 · 安全合规', icon: Building2, accent: '#94a3b8' },
+            { href: '/jiaoyisuo', label: '交易所入口', sub: '平台介绍 · 官方入口直达', icon: Building2, accent: '#94a3b8' },
         ],
     },
 ];
@@ -40,7 +40,7 @@ export function QuickLinks() {
     return (
         <section className="py-14" style={{ background: 'var(--bg-surface)' }}>
             <div className="max-w-5xl mx-auto px-5">
-                <h2 className="section-title text-2xl font-bold mb-8">快速入口</h2>
+                <h2 className="section-title text-2xl font-bold mb-8">欧易快速入口</h2>
 
                 <div className="space-y-8">
                     {sections.map((section) => {

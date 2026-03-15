@@ -4,7 +4,7 @@ import { GatewayTrigger } from '@/features/DownloadGateway/GatewayContext';
 import siteConfig from '@/content/site-config.json';
 
 export default function Footer() {
-    const { brand, brandFull, tagline, primaryCta, footerNav } = siteConfig;
+    const { brand, brandFull, tagline, primaryCta, footerNav, disclaimer } = siteConfig as any;
 
     return (
         <footer style={{ background: '#030710', borderTop: '1px solid rgba(37,99,235,0.1)' }} aria-labelledby="footer-heading">
@@ -34,7 +34,7 @@ export default function Footer() {
                         <div>
                             <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">下载与产品</h3>
                             <ul className="mt-5 space-y-3">
-                                {footerNav.product.map((item) => (
+                                {footerNav.product.map((item: any) => (
                                     <li key={item.href}>
                                         <Link href={item.href} className="text-sm text-slate-500 hover:text-slate-200 transition-colors">
                                             {item.name}
@@ -46,7 +46,7 @@ export default function Footer() {
                         <div>
                             <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">支持与帮助</h3>
                             <ul className="mt-5 space-y-3">
-                                {footerNav.support.map((item) => (
+                                {footerNav.support.map((item: any) => (
                                     <li key={item.href}>
                                         <Link href={item.href} className="text-sm text-slate-500 hover:text-slate-200 transition-colors">
                                             {item.name}
@@ -74,16 +74,21 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Bottom bar */}
                 <div
-                    className="mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
+                    className="mt-12 pt-8 flex flex-col gap-6"
                     style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}
                 >
-                    <p className="text-xs text-slate-600">
-                        &copy; 2026 OKX Technology Company Limited. All rights reserved.
-                    </p>
-                    <p className="text-xs text-slate-700">
-                        数字资产交易存在风险，请理性投资。
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                        <p className="text-xs text-slate-600">
+                            &copy; {new Date().getFullYear()} {brand}(OKX)粉丝信息中心. All rights reserved.
+                        </p>
+                        <p className="text-xs text-slate-700">
+                            数字资产交易存在风险，请理性投资。
+                        </p>
+                    </div>
+                    {/* Disclaimer */}
+                    <p className="text-[10px] leading-relaxed text-slate-800 border-t border-white/[0.02] pt-6">
+                        {disclaimer}
                     </p>
                 </div>
             </div>

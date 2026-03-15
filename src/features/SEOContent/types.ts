@@ -81,6 +81,23 @@ export interface SubPageContent {
         title: string;
         items: FAQItem[];
     };
+    layoutType?: 'default' | 'tutorial-hub';
+    tutorialCategories?: {
+        name: string;
+        items: {
+            title: string;
+            href: string;
+        }[];
+    }[];
+    sections?: {
+        title: string;
+        description?: string;
+        content?: string;
+        steps?: {
+            title: string;
+            content: string;
+        }[];
+    }[];
 }
 
 export interface SiteConfig {

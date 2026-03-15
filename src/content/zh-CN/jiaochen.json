@@ -1,0 +1,94 @@
+{
+    "navLabel": "欧易教程中心",
+    "metadata": {
+        "title": "欧易教程中心_欧易OKX使用入门、操作指南与常见问题解答",
+        "description": "欧易(OKX)官方教程中心，为您提供详尽的欧易新手注册教程、电脑及移动端APP使用指南、以及平台操作过程中常见问题的深度解答，助您快速上手数字资产交易。"
+    },
+    "hero": {
+        "title": "欧易教程中心",
+        "subtitle": "官方全平台下载入口 | 电脑·手机·网页·钱包 | 2026 最新教程 | 粉丝整理",
+        "cta": "欧易官方最新入口"
+    },
+    "layoutType": "tutorial-hub",
+    "tutorialCategories": [
+        {
+            "name": "电脑版专项",
+            "items": [
+                {
+                    "title": "欧易电脑版下载官网",
+                    "href": "/diannaoban-xiazai-guanwang"
+                },
+                {
+                    "title": "欧易电脑版客服电话",
+                    "href": "/diannaoban-kefu-dianhua"
+                },
+                {
+                    "title": "欧易电脑版优惠活动",
+                    "href": "/diannaoban-youhui-huodong"
+                },
+                {
+                    "title": "欧易电脑版注册账号",
+                    "href": "/diannaoban-zhuce-zhanghao"
+                },
+                {
+                    "title": "欧易电脑版功能介绍",
+                    "href": "/diannaoban-gongneng-jieshao"
+                },
+                {
+                    "title": "欧易电脑版免费试用",
+                    "href": "/diannaoban-mianfei-shiyong"
+                }
+            ]
+        },
+        {
+            "name": "PC下载引导",
+            "items": [
+                {
+                    "title": "欧易pc下载安装",
+                    "href": "/ouyi-pc-xiazai-anzhuang"
+                },
+                {
+                    "title": "欧易pc下载教程",
+                    "href": "/ouyi-pc-xiazai-jiaocheng"
+                },
+                {
+                    "title": "欧易pc下载方法",
+                    "href": "/ouyi-pc-xiazai-fangfa"
+                },
+                {
+                    "title": "欧易pc下载软件",
+                    "href": "/ouyi-pc-xiazai-ruanjian"
+                },
+                {
+                    "title": "欧易pc下载链接",
+                    "href": "/ouyi-pc-xiazai-lianjie"
+                },
+                {
+                    "title": "欧易pc下载最新版",
+                    "href": "/ouyi-pc-xiazai-zuixinban"
+                },
+                {
+                    "title": "欧易pc下载中文版",
+                    "href": "/ouyi-pc-xiazai-zhongwenban"
+                }
+            ]
+        },
+        {
+            "name": "常见问题解决",
+            "items": [
+                {
+                    "title": "欧易打不开怎么办",
+                    "href": "/ouyi-dabukai"
+                },
+                {
+                    "title": "常见问题汇总信息",
+                    "href": "/diannaoban-changjian-wenti"
+                },
+                {
+                    "title": "更新日志查询中心",
+                    "href": "/diannaoban-gengxin-rizhi"
+                }
+            ]
+        }
+    ]
+}

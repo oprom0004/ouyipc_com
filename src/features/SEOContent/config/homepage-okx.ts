@@ -45,7 +45,7 @@ export const homepageContent: PageSEOContent = {
     },
     section3: {
         title: '2026年 OKX 生态发展动态',
-        content: `进入 2026 年，<strong>OKEx</strong> 品牌升级为 <strong>OKX</strong> 的战略成效显著。公司已在全球多个主要金融司法管辖区获得了合规牌照。OKX 推出的公链 X Layer（原 OKT Chain 升级版），基于 ZK-Rollup 技术，完美兼容以太坊 EVM，为开发者提供了低成本、高性能的链上构建环境。无论市场习惯称呼其为欧意、OKEx 还是 OKX，该平台始终是探索数字金融世界的最佳基础设施。`
+        content: `进入 2026 年，<strong>OKEx</strong> 品牌升级为 <strong>OKX</strong> 的战略成效显著。公司已在全球多个主要金融司法管辖区获得了合规牌照。OKX 推出的公链 X Layer（原 OKT Chain 升级版），基于 ZK-Rollup 技术，完美兼容以太坊 EVM，为开发者提供了低成本、高性能的链上构建环境。无论市场习惯称呼其为欧易、OKEx 还是 OKX，该平台始终是探索数字金融世界的最佳基础设施。`
     },
     faq: {
         title: '常见问题解答 (FAQ) - OKX官方入口与使用指南',

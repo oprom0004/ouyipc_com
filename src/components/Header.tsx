@@ -84,22 +84,20 @@ export default function Header() {
                                     />
                                 </Link>
                                 {openDropdown === item.label && (
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-36">
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-48">
                                         <div
-                                            className="rounded-xl overflow-hidden shadow-2xl"
+                                            className="rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
                                             style={{
-                                                background: 'rgba(8,15,30,0.95)',
-                                                border: '1px solid rgba(37,99,235,0.25)',
-                                                backdropFilter: 'blur(20px)',
+                                                background: 'rgba(10,20,40,0.96)',
+                                                border: '1px solid rgba(37,99,235,0.3)',
+                                                backdropFilter: 'blur(24px)',
                                             }}
                                         >
                                             {item.children.map((child) => (
                                                 <Link
                                                     key={child.href}
                                                     href={child.href}
-                                                    className="block px-4 py-3 text-sm text-slate-300 hover:text-white transition-colors"
-                                                    onMouseEnter={e => (e.currentTarget.style.background = 'rgba(37,99,235,0.15)')}
-                                                    onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                                                    className="block px-5 py-3.5 text-sm text-slate-300 hover:text-white hover:bg-blue-600/20 transition-all border-b border-white/[0.03] last:border-0"
                                                     onClick={() => setOpenDropdown(null)}
                                                 >
                                                     {child.label}
@@ -126,13 +124,12 @@ export default function Header() {
                     <GatewayTrigger className="text-sm font-medium text-slate-400 hover:text-white transition-colors flex items-center gap-1">
                         访问官网 <span className="text-blue-400">→</span>
                     </GatewayTrigger>
-                    <Link
-                        href={primaryCta.href}
+                    <GatewayTrigger
                         className="btn-primary px-5 py-2 rounded-lg text-sm font-semibold"
                         style={{ background: 'linear-gradient(135deg, #2563eb, #0891b2)' }}
                     >
                         立即注册
-                    </Link>
+                    </GatewayTrigger>
                 </div>
 
                 {/* Mobile Button */}
@@ -204,14 +201,13 @@ export default function Header() {
                             <GatewayTrigger className="py-3 rounded-xl text-center text-sm font-medium text-white transition-colors [background:rgba(37,99,235,0.15)] [border:1px_solid_rgba(37,99,235,0.3)]">
                                 访问官网
                             </GatewayTrigger>
-                            <Link
-                                href={primaryCta.href}
+                            <GatewayTrigger
                                 className="btn-primary py-3 rounded-xl text-center text-sm font-semibold text-white"
                                 style={{ background: 'linear-gradient(135deg, #2563eb, #0891b2)' }}
                                 onClick={closeMenu}
                             >
                                 立即注册
-                            </Link>
+                            </GatewayTrigger>
                         </div>
                     </nav>
                 </div>

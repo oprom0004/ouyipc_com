@@ -9,6 +9,8 @@ export function getSiteConfig() {
     return JSON.parse(fs.readFileSync(filePath, 'utf8'));
 }
 
+import { injectInternalLinks } from './auto-link';
+
 // 模板变量替换：{year} → 当前年份，{brand} → 站点品牌名
 function processTemplate(raw: string): string {
     const year = new Date().getFullYear().toString();
@@ -18,20 +20,47 @@ function processTemplate(raw: string): string {
         .replace(/\{brand\}/g, brand);
 }
 
+// 深度递归处理内容，注入内链
+function processContentInternal(obj: any, currentKey?: string): any {
+    if (!obj) return obj;
+
+    if (typeof obj === 'string') {
+        const contentKeys = ['content', 'description', 'answer', 'subtitle'];
+        if (currentKey && contentKeys.includes(currentKey)) {
+            return injectInternalLinks(obj);
+        }
+        return obj;
+    }
+
+    if (Array.isArray(obj)) {
+        return obj.map(item => processContentInternal(item, currentKey));
+    }
+
+    if (typeof obj === 'object') {
+        const newObj: any = {};
+        for (const key in obj) {
+            newObj[key] = processContentInternal(obj[key], key);
+        }
+        return newObj;
+    }
+
+    return obj;
+}
+
 // 原有函数保留：首页 page.tsx 用 getPageContent('homepage') 读取
 export function getPageContent(pageName: string) {
     const filePath = path.join(CONTENT_DIR, `${pageName}.json`);
     const raw = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(processTemplate(raw));
+    const data = JSON.parse(processTemplate(raw));
+    return processContentInternal(data);
 }
 
 // 由 slug 数组精确定位文件路径
-// ['ouyi-app']       → src/content/zh-CN/ouyi-app.json
-// ['ouyi-app', 'ios'] → src/content/zh-CN/ouyi-app/ios.json
 export function getPageContentBySlug(slugParts: string[]) {
     const filePath = path.join(CONTENT_DIR, ...slugParts) + '.json';
     const raw = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(processTemplate(raw));
+    const data = JSON.parse(processTemplate(raw));
+    return processContentInternal(data);
 }
 
 // 递归扫描 content 目录，返回所有 JSON 文件对应的 slug 数组

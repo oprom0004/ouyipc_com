@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ArrowRight, Download, ChevronRight } from 'lucide-react';
 import { GatewayTrigger } from '@/features/DownloadGateway/GatewayContext';
+import siteConfig from '@/content/site-config.json';
 
 interface BreadcrumbItem {
     label: string;
@@ -23,7 +24,7 @@ interface PageHeroProps {
 export function PageHero({
     title,
     subtitle,
-    cta = "立即下载",
+    cta = siteConfig.hero.defaultCta,
     ctaHref = "#",
     secondaryCta,
     secondaryCtaHref,
@@ -31,7 +32,7 @@ export function PageHero({
     breadcrumbs
 }: PageHeroProps) {
     return (
-        <div className="relative isolate overflow-hidden pt-32 pb-28 lg:pt-44 lg:pb-36" style={{ background: 'var(--bg-base)' }}>
+        <div className="relative isolate overflow-hidden pt-32 pb-16 lg:pt-44 lg:pb-20" style={{ background: 'var(--bg-base)' }}>
             {/* Ambient orbs */}
             <div
                 className="orb w-[600px] h-[600px] -top-40 left-1/2 -translate-x-1/2 opacity-30"
@@ -83,7 +84,7 @@ export function PageHero({
                         style={{ background: 'rgba(37,99,235,0.12)', border: '1px solid rgba(37,99,235,0.25)' }}
                     >
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse inline-block" />
-                        欧意 · 官方中文入口
+                        {siteConfig.hero.badgeText}
                     </span>
                 </div>
 
@@ -112,9 +113,10 @@ export function PageHero({
                 </h1>
 
                 {/* Subtitle */}
-                <p className="mt-5 text-base md:text-lg leading-relaxed text-slate-400 max-w-2xl mx-auto">
-                    {subtitle}
-                </p>
+                <p
+                    className="mt-5 text-base md:text-lg leading-relaxed text-slate-400 max-w-2xl mx-auto content-area"
+                    dangerouslySetInnerHTML={{ __html: subtitle }}
+                />
 
                 {/* CTA Buttons */}
                 <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

@@ -1,57 +1,53 @@
 {
   "navLabel": "OKB生态",
   "metadata": {
-    "title": "OKB币介绍 | 欧意(OKX)平台币OKB用途与购买教程 {year}",
-    "description": "欧意(OKX)平台币OKB全面介绍。OKB用途、手续费折扣、季度销毁机制、X Layer生态应用及购买方式，{year}年最新详解。"
+    "title": "OKB 介绍及 X Layer 生态权益详情",
+    "description": "欧易(OKX)资深粉丝整理的 OKB 生态解析。为您提供 OKB 代币的持有者权益、销毁机制详情以及原生网络 X Layer 的最新发展动向。"
   },
   "hero": {
-    "title": "OKB - 欧意(OKX)平台币介绍",
-    "subtitle": "OKB 用途与权益 | 手续费折扣 | 季度销毁 | X Layer生态 | 欧意专属平台通证",
-    "cta": "在欧意购买OKB",
+    "title": "OKB 平台权益通证",
+    "subtitle": "欧易生态核心资产 | 回购销毁机制 | 赋能 OKX 全球布局",
+    "cta": "查看 OKB 实时行情",
     "useGateway": true
   },
   "intro": {
-    "title": "OKB是什么？",
+    "title": "OKB：驱动欧易生态发展的核心引擎",
     "content": [
-      "<strong>OKB</strong> 是<strong>欧意(OKX)</strong>发行的官方平台通证（Platform Token），于 2019 年上线，总量 3 亿枚，采用季度性回购销毁机制，流通量持续递减。持有 OKB 的<strong>欧意</strong>用户可享受交易手续费折扣、平台活动优先参与权及 X Layer 生态权益。",
-      "与部分交易所平台币不同，<strong>OKB</strong> 还是欧意自研 L2 网络 <strong>X Layer</strong>（兼容以太坊 EVM）的原生 Gas Token，在链上原生应用中具备真实使用价值。"
+      "OKB 是由欧易(OKX)官方推出的全球通用平台币，也是链接欧易全球用户与多元生态的桥梁。作为欧易资深用户，我们目睹了 OKB 从单一的平台通证进化为支撑 X Layer 网络（基于 ZK 技术的 Layer 2）的核心燃料。持有 OKB 不仅意味着分享平台长期发展的红利，更意味着在欧易的整个生态网络中拥有多重专属权益与功能特权。",
+      "官方通过季度性的平台利润回购与销毁计划，持续增强了 OKB 的通缩属性与市场稀缺性。在 {year} 年，随着欧易在合规化与公链技术上的深度布局，OKB 在 Jumpstart 新币上线、手续费抵扣以及 X Layer 链上质押等维度的赋能愈发显著。本站旨在为您深度解析 OKB 的技术底层与应用价值，通过平实的粉丝视点带您透视其背后的经济模型。"
     ]
   },
   "features": {
-    "title": "持有OKB的核心权益",
+    "title": "OKB 持有者的核心权益与回馈",
     "items": [
       {
-        "title": "手续费折扣",
-        "description": "在<strong>欧意(OKX)</strong>持有 OKB 并达到对应数量阈值，现货与合约交易手续费可享受最高 40% 折扣，长期活跃交易者省费效果显著。"
+        "title": "分梯度的手续费抵扣特权",
+        "description": "根据账户持仓 OKB 的数量，用户可以获得不同等级的手续费折扣。这种阶梯式的会员制度，极大降低了活跃交易者的持仓成本，是专业投资者长期持有 OKB 的核心动力之一。"
       },
       {
-        "title": "季度回购销毁",
-        "description": "<strong>欧意</strong>每季度使用平台营收的一定比例在二级市场回购 OKB 并永久销毁，总流通量逐年递减，形成通缩效应，长线持有者受益。"
+        "title": "Jumpstart 新币上线参与权",
+        "description": "作为欧易最受欢迎的板块之一，Jumpstart 允许 OKB 持有者通过质押获得优质新项目的代币分配。这相当于赋予了 OKB 一种持续的现金流收入，让粉丝能够共享数字资产市场的早期增长。 "
       },
       {
-        "title": "X Layer 生态 Gas Token",
-        "description": "OKB 是欧意自研 L2 网络 <strong>X Layer</strong> 的原生 Gas 通证。在 X Layer 上进行链上操作（DApp 交互、合约部署）需消耗 OKB，赋予平台币真实链上使用价值。"
-      },
-      {
-        "title": "活动优先权与空投资格",
-        "description": "<strong>欧意(OKX)</strong>举办新项目 IEO（首次交易所发行）、空投及专属活动时，持有 OKB 的用户通常享有参与优先权或额外分配权重。"
+        "title": "通缩模型：季度性回购销毁",
+        "description": "欧易官方将平台币币交易手续费利润的一部分用于回购并永久销毁 OKB，整个过程高度透明且可追溯。这种持续性的销毁机制，从供需关系层面为 OKB 的长期稳健表现提供了底层支撑。"
       }
     ]
   },
   "faq": {
-    "title": "OKB常见问题",
+    "title": "OKB 生态常见问题",
     "items": [
       {
-        "question": "OKB在哪里可以买到？",
-        "answer": "<strong>OKB</strong> 可直接在<strong>欧意(OKX)</strong>交易所购买，支持 USDT、BTC、ETH 等主流币种兑换。进入欧意官网或 APP，搜索「OKB/USDT」交易对即可交易。"
+        "question": "OKB 销毁记录在哪里可以查询？",
+        "answer": "欧易官方会定期发布 OKB 回购销毁公告。您可以通过 OKX 官网的‘关于我们-销毁报告’板块查看历次销毁的具体数量及链上哈希值。作为爱好者，我们建议用户关注销毁频率及其与平台成交量的关系。"
       },
       {
-        "question": "持有多少OKB才能享受手续费折扣？",
-        "answer": "<strong>欧意(OKX)</strong>按持仓量设置不同折扣等级，最低持有一定数量的 OKB 即可获得初级折扣，具体档位以欧意官网费率页面当期规则为准（规则可能随市场调整）。"
+        "question": "什么是 X Layer 网络？它和 OKB 是什么关系？",
+        "answer": "X Layer 是欧易推出的基于以太坊的 Layer 2 扩容网络，OKB 在该网络中充当原生 Gas 费代币。这意味着持有 OKB 您不仅能享受平台权益，还能直接参与 OKX 全球链上生态建设。"
       },
       {
-        "question": "OKB和比特币、以太坊有什么区别？",
-        "answer": "<strong>OKB</strong> 是<strong>欧意交易所</strong>发行的平台权益通证，属于交易所代币（Exchange Token）类别，与 BTC（点对点支付）、ETH（智能合约平台）的定位不同。OKB 的价值主要与欧意平台的使用量、回购销毁进度和 X Layer 生态扩张挂钩。"
+        "question": "如何获得 OKB？",
+        "answer": "您可以通过欧易官网的币币交易（Spot）或法币买币功能直接购买。作为官方生态的核心代币，OKB 在全网拥有极高的流动性，您可以随时在不同的交易终端实现自由划转与变现。"
       }
     ]
   }

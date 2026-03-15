@@ -7,7 +7,7 @@ export function generateMetadata({ params }: { params: { slug: string[] } }): Me
     try {
         const content = getPageContentBySlug(params.slug);
         return {
-            title: content.metadata?.title || '欧意',
+            title: content.metadata?.title || '欧易',
             description: content.metadata?.description || '',
             alternates: {
                 canonical: `https://ouyijiaoyisuo.org/${params.slug.join('/')}/`,
