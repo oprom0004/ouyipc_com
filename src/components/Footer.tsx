@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import Image from 'next/image';
 import { GatewayTrigger } from '@/features/DownloadGateway/GatewayContext';
 import siteConfig from '@/content/site-config.json';
@@ -82,9 +82,17 @@ export default function Footer() {
                         <p className="text-xs text-slate-600">
                             &copy; {new Date().getFullYear()} {brand}(OKX)粉丝信息中心. All rights reserved.
                         </p>
-                        <p className="text-xs text-slate-700">
-                            数字资产交易存在风险，请理性投资。
-                        </p>
+                        <div className="text-xs text-slate-500 flex items-center gap-2">
+                            <span>友情链接：</span>
+                            <a
+                                href="https://ouxpc.com/"
+                                target="_blank"
+                                rel="noopener"
+                                className="text-blue-400 hover:underline hover:text-blue-300 transition"
+                            >
+                                欧意 OKX 电脑版下载 (ouxpc.com)
+                            </a>
+                        </div>
                     </div>
                     {/* Disclaimer */}
                     <p className="text-[10px] leading-relaxed text-slate-800 border-t border-white/[0.02] pt-6">
