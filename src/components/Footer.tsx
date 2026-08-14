@@ -62,13 +62,13 @@ export default function Footer({ locale = 'zh' }: FooterProps) {
             <h4 className="text-zinc-400 font-semibold text-xs">{isHant ? "友情連結" : "友情链接"}</h4>
             <ul className="space-y-2">
               <li>
-                <a href="https://oyweb.net/" target="_blank" rel="noopener" className="text-emerald-400 font-bold hover:underline transition">
-                  {isHant ? "歐易web 官方網頁版 (oyweb.net)" : "欧易web 官方网页版 (oyweb.net)"}
+                <a href="https://ouxpc.com/" target="_blank" rel="noopener" className="text-emerald-400 font-bold hover:underline transition">
+                  {isHant ? "歐意 OKX 官方全功能導航 (ouxpc.com)" : "欧意 OKX 官方全功能导航 (ouxpc.com)"}
                 </a>
               </li>
               <li>
-                <a href="https://ouxpc.com/" target="_blank" rel="noopener" className="text-blue-400 font-bold hover:underline transition">
-                  {isHant ? "歐意 OKX 官方全功能導航 (ouxpc.com)" : "欧意 OKX 官方全功能导航 (ouxpc.com)"}
+                <a href="https://oyweb.net/" target="_blank" rel="noopener" className="text-emerald-400 font-bold hover:underline transition">
+                  {isHant ? "歐易web 官方網頁版 (oyweb.net)" : "欧易web 官方网页版 (oyweb.net)"}
                 </a>
               </li>
             </ul>
