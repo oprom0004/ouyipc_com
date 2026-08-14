@@ -4,9 +4,10 @@ const path = require('path');
 // Target directory paths
 const APP_DIR = path.join(process.cwd(), 'src/app');
 const COMPONENTS_DIR = path.join(process.cwd(), 'src/components');
+const CONTENT_DIR = path.join(process.cwd(), 'src/content');
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 
-console.log('\n🔍 Running Complete SEO Audit for Next.js (Optimized V2)\n');
+console.log('\n🔍 Running Complete SEO Audit for Next.js (Optimized V3)\n');
 
 const results = {
     pass: 0,
@@ -36,6 +37,26 @@ function addCheck(name, status, message) {
     console.log(`${icon} ${name}: ${message}`);
 }
 
+// Helper to recursively scan directory
+function scanDir(dir, fileList = []) {
+    if (!fs.existsSync(dir)) return fileList;
+    const files = fs.readdirSync(dir);
+    files.forEach(file => {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+        if (stat.isDirectory()) {
+            if (file !== 'node_modules' && file !== '.next' && file !== 'dist') {
+                scanDir(filePath, fileList);
+            }
+        } else if (/\.(tsx|ts|js|jsx)$/.test(file)) {
+            fileList.push(filePath);
+        }
+    });
+    return fileList;
+}
+
+const allFiles = [...scanDir(APP_DIR), ...scanDir(COMPONENTS_DIR), ...scanDir(CONTENT_DIR)];
+
 // 1. Check 404 Page (src/app/not-found.tsx)
 console.log('📄 Checking 404 Page...\n');
 if (checkFile('src/app/not-found.tsx')) {
@@ -58,7 +79,7 @@ if (layoutContent) {
     const hasChinaCDN = /fonts\.(font\.im|loli\.net|geekzu\.org)/i.test(layoutContent);
 
     if (hasGoogleFonts) {
-        addCheck('External CSS', 'warning', 'Using Google Fonts (slow in China, remove next/font/google)');
+        addCheck('External CSS', 'warning', 'Using Google Fonts (slow in China, consider local fonts)');
     } else if (hasChinaCDN) {
         addCheck('External CSS', 'pass', 'Using China-friendly CDN for fonts');
     } else {
@@ -105,26 +126,6 @@ function scanForExternalImages(filePath) {
     return findings;
 }
 
-// Helper to recursively scan directory
-function scanDir(dir, fileList = []) {
-    if (!fs.existsSync(dir)) return fileList;
-    const files = fs.readdirSync(dir);
-    files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        if (stat.isDirectory()) {
-            if (file !== 'node_modules' && file !== '.next') {
-                scanDir(filePath, fileList);
-            }
-        } else if (/\.(tsx|ts|js|jsx)$/.test(file)) {
-            fileList.push(filePath);
-        }
-    });
-    return fileList;
-}
-
-const allFiles = [...scanDir(APP_DIR), ...scanDir(COMPONENTS_DIR)];
-
 allFiles.forEach(absolutePath => {
     const relativePath = path.relative(process.cwd(), absolutePath);
     externalImages.push(...scanForExternalImages(relativePath));
@@ -139,21 +140,83 @@ if (externalImages.length === 0) {
     addCheck('External Images', 'warning', `Found ${externalImages.length} external image(s) from: ${domains.join(', ')}`);
 }
 
-// 4. Check Hardcoded Dates
+// ✨ NEW: 4. Check Hardcoded Dates
 console.log('\n📅 Checking Hardcoded Dates...\n');
-addCheck('Hardcoded Dates', 'pass', 'No hardcoded dates logic triggered (Assuming Checked)');
+// Format: YYYY-MM-DD or YYYY/MM/DD — look for static date strings in content files
+const hardcodedDatePattern = /['"`>]\s*\d{4}[-\/](0[1-9]|1[0-2])[-\/](0[1-9]|[12]\d|3[01])\s*['"`<]/;
+const dateInContentFiles = [];
+
+allFiles.forEach(absolutePath => {
+    const relativePath = path.relative(process.cwd(), absolutePath);
+    const content = readFile(relativePath);
+    if (!content) return;
+
+    const lines = content.split('\n');
+    lines.forEach((line, idx) => {
+        // Skip comments and dynamic date expressions (TODAY, new Date, etc.)
+        if (line.trim().startsWith('//') || line.trim().startsWith('*')) return;
+        if (/TODAY|new Date|toISOString|toLocaleDateString|getFullYear/i.test(line)) return;
+
+        if (hardcodedDatePattern.test(line)) {
+            const match = line.match(/\d{4}[-\/](0[1-9]|1[0-2])[-\/](0[1-9]|[12]\d|3[01])/);
+            if (match) {
+                console.log(`   🔸 Hardcoded date "${match[0]}" in ${path.basename(absolutePath)}:${idx + 1}`);
+                dateInContentFiles.push({ file: path.basename(absolutePath), line: idx + 1, date: match[0] });
+            }
+        }
+    });
+});
+
+if (dateInContentFiles.length === 0) {
+    addCheck('Hardcoded Dates', 'pass', 'No hardcoded dates found in content files');
+} else {
+    addCheck('Hardcoded Dates', 'warning', `Found ${dateInContentFiles.length} hardcoded date(s) — consider using dynamic date`);
+}
 
 
 // 5. Check Meta Tags & Canonical
 console.log('\n🏷️  Checking Meta Tags & Canonical...\n');
 if (layoutContent) {
     const hasMetadataBase = /metadataBase:/i.test(layoutContent);
-    const hasAlternates = /alternates:/i.test(layoutContent);
 
-    if (hasMetadataBase && hasAlternates) {
-        addCheck('Canonical URLs', 'pass', 'Globally configured in Root Layout (metadataBase + alternates)');
+    if (hasMetadataBase) {
+        addCheck('metadataBase', 'pass', 'metadataBase configured in Root Layout');
     } else {
-        addCheck('Canonical URLs', 'warning', 'Missing global canonical config in layout.tsx');
+        addCheck('metadataBase', 'error', 'Missing metadataBase in layout.tsx — canonical URLs will be relative only');
+    }
+
+    // ✨ Per-page canonical self-reference check
+    // Risk: if layout.tsx sets alternates: { canonical: '/' } and inner pages don't override,
+    // ALL inner pages will output canonical pointing to homepage — severe SEO damage.
+    const pageFiles = allFiles.filter(f => f.endsWith('page.tsx'));
+    const layoutHasCanonical = /alternates\s*:[\s\S]*?canonical\s*:/i.test(layoutContent);
+    const pagesWithoutCanonical = [];
+
+    pageFiles.forEach(file => {
+        const content = readFile(path.relative(process.cwd(), file));
+        if (!content) return;
+        // Skip redirect pages and noindex pages — they don't need canonical
+        if (/redirect\s*\(/.test(content)) return;
+        if (/robots\s*:[\s\S]*?index\s*:\s*false/i.test(content)) return;
+
+        const hasOwnCanonical = /alternates\s*:[\s\S]*?canonical\s*:/i.test(content);
+        if (!hasOwnCanonical) {
+            pagesWithoutCanonical.push(path.relative(process.cwd(), file));
+        }
+    });
+
+    if (pagesWithoutCanonical.length === 0) {
+        addCheck('Per-page Canonical', 'pass', `All ${pageFiles.length} page(s) have self-referencing canonical`);
+    } else if (layoutHasCanonical) {
+        // Layout has a canonical (e.g. '/') — inner pages without override will inherit it → points to homepage!
+        pagesWithoutCanonical.forEach(f => console.log(`   🔸 Missing canonical: ${f}`));
+        addCheck('Per-page Canonical', 'error',
+            `${pagesWithoutCanonical.length} inner page(s) missing canonical — will inherit layout's '/' → canonical points to homepage!`);
+    } else {
+        // Layout has no canonical — Next.js auto-infers from URL (safe, but explicit is better)
+        pagesWithoutCanonical.forEach(f => console.log(`   🔸 No explicit canonical: ${f}`));
+        addCheck('Per-page Canonical', 'warning',
+            `${pagesWithoutCanonical.length} page(s) rely on auto-inferred canonical (safe, but consider explicit self-reference)`);
     }
 
     const checks = {
@@ -169,7 +232,22 @@ if (layoutContent) {
     }
 }
 
-// 6. Check Robots & Sitemap
+
+// ✨ NEW: 6. Check Favicon / Icons
+console.log('\n🖼️  Checking Favicon & Icons...\n');
+const hasFaviconIco = checkFile('public/favicon.ico') || checkFile('src/app/favicon.ico');
+const hasAppleIcon = checkFile('public/apple-icon.png') || checkFile('src/app/apple-icon.png');
+const hasIconInLayout = layoutContent && /icons:/i.test(layoutContent);
+
+if (hasFaviconIco && (hasAppleIcon || hasIconInLayout)) {
+    addCheck('Favicon & Icons', 'pass', 'favicon.ico + apple icon configured');
+} else if (hasFaviconIco) {
+    addCheck('Favicon & Icons', 'warning', 'favicon.ico found but missing apple-icon or icons config in layout');
+} else {
+    addCheck('Favicon & Icons', 'error', 'No favicon found (public/favicon.ico or app/favicon.ico)');
+}
+
+// 7. Check Robots & Sitemap
 console.log('\n🤖 Checking Robots & Sitemap...\n');
 const hasPublicRobots = checkFile('public/robots.txt');
 const hasAppRobots = checkFile('src/app/robots.ts');
@@ -191,7 +269,7 @@ if (hasPublicSitemap || hasAppSitemap) {
     addCheck('Sitemap', 'warning', 'No sitemap found');
 }
 
-// 7. Check Schema.org
+// 8. Check Schema.org
 console.log('\n📋 Checking Schema.org...\n');
 let schemaCount = 0;
 allFiles.filter(f => f.endsWith('page.tsx')).forEach(file => {
@@ -206,7 +284,7 @@ if (schemaCount > 0) {
     addCheck('Schema.org', 'warning', 'No Schema.org markup found');
 }
 
-// 8. Check Image Optimization
+// 9. Check Image Optimization
 console.log('\n🖼️  Checking Image Optimization...\n');
 let unoptimizedImgCount = 0;
 let optimizedCount = 0;

@@ -1,105 +1,115 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { GatewayTrigger } from '@/features/DownloadGateway/GatewayContext';
-import siteConfig from '@/content/site-config.json';
+"use client";
 
-export default function Footer() {
-    const { brand, brandFull, tagline, primaryCta, footerNav, disclaimer } = siteConfig as any;
+import Link from "next/link";
+import { useConfig } from "../context/ConfigContext";
 
-    return (
-        <footer style={{ background: '#030710', borderTop: '1px solid rgba(37,99,235,0.1)' }} aria-labelledby="footer-heading">
-            <h2 id="footer-heading" className="sr-only">Footer</h2>
-            <div className="mx-auto max-w-7xl px-6 pb-12 pt-16 lg:px-8">
-                <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-                    {/* Brand */}
-                    <div className="space-y-6">
-                        <Link href="/" className="flex items-center gap-2.5">
-                            <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
-                                <Image src="/logo.png" alt={`${brand} Logo`} width={28} height={28} className="object-contain invert opacity-90" />
-                            </div>
-                            <span className="text-white font-bold text-lg tracking-tight">{brandFull}</span>
-                        </Link>
-                        <p className="text-sm leading-6 text-slate-500 max-w-xs">
-                            {tagline}
-                        </p>
-                        <GatewayTrigger
-                            className="inline-flex px-5 py-2.5 rounded-xl text-sm font-semibold text-white transition-all hover:-translate-y-0.5 btn-primary"
-                        >
-                            {primaryCta.label}
-                        </GatewayTrigger>
-                    </div>
+interface FooterProps {
+  locale?: 'zh' | 'hant';
+}
 
-                    {/* Links */}
-                    <div className="mt-14 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
-                        <div>
-                            <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">下载与产品</h3>
-                            <ul className="mt-5 space-y-3">
-                                {footerNav.product.map((item: any) => (
-                                    <li key={item.href}>
-                                        <Link href={item.href} className="text-sm text-slate-500 hover:text-slate-200 transition-colors">
-                                            {item.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">支持与帮助</h3>
-                            <ul className="mt-5 space-y-3">
-                                {footerNav.support.map((item: any) => (
-                                    <li key={item.href}>
-                                        <Link href={item.href} className="text-sm text-slate-500 hover:text-slate-200 transition-colors">
-                                            {item.name}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-xs font-semibold uppercase tracking-widest text-slate-400">法律条款</h3>
-                            <ul className="mt-5 space-y-3">
-                                {[
-                                    { name: '隐私政策', href: '#' },
-                                    { name: '服务条款', href: '#' },
-                                    { name: '风险提示', href: '#' },
-                                ].map((item) => (
-                                    <li key={item.name}>
-                                        <a href={item.href} className="text-sm text-slate-500 hover:text-slate-200 transition-colors">
-                                            {item.name}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+export default function Footer({ locale = 'zh' }: FooterProps) {
+  const { config } = useConfig();
+  const isHant = locale === 'hant';
+  const prefix = isHant ? "/hant" : "";
 
-                <div
-                    className="mt-12 pt-8 flex flex-col gap-6"
-                    style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}
-                >
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                        <p className="text-xs text-slate-600">
-                            &copy; {new Date().getFullYear()} {brand}(OKX)粉丝信息中心. All rights reserved.
-                        </p>
-                        <div className="text-xs text-slate-500 flex items-center gap-2">
-                            <span>友情链接：</span>
-                            <a
-                                href="https://ouxpc.com/"
-                                target="_blank"
-                                rel="noopener"
-                                className="text-blue-400 hover:underline hover:text-blue-300 transition"
-                            >
-                                欧意 OKX 电脑版下载 (ouxpc.com)
-                            </a>
-                        </div>
-                    </div>
-                    {/* Disclaimer */}
-                    <p className="text-[10px] leading-relaxed text-slate-800 border-t border-white/[0.02] pt-6">
-                        {disclaimer}
-                    </p>
-                </div>
+  return (
+    <footer className="bg-zinc-950 border-t border-zinc-900 text-zinc-500 py-12 md:py-16 text-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        
+        {/* Top Info Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-zinc-900">
+          
+          <div className="md:col-span-4 space-y-4">
+            <div className="flex items-center gap-2">
+              <span className="w-6 h-6 rounded-md bg-white text-black font-extrabold flex items-center justify-center font-mono text-[10px] select-none">
+                OKX
+              </span>
+              <span className="font-display font-black text-white text-sm">oyipc.com</span>
             </div>
-        </footer>
-    );
+            <p className="max-w-md text-zinc-500 leading-normal">
+              {isHant 
+                ? "本站為 OKX / 歐意用戶整理的非官方粉絲指南網站，提供訪問入口整理、客戶端下載指引與常見使用教程。本站不隸屬於 OKX 平台。"
+                : "本站为 OKX / 欧易用户整理的非官方粉丝指南网站，提供访问入口整理、客户端下载指引与常见使用教程。本站不隶属于 OKX 平台。"}
+            </p>
+          </div>
+
+          <div className="md:col-span-2 space-y-3">
+            <h4 className="text-zinc-400 font-semibold text-xs">{isHant ? "快速導航" : "快速导航"}</h4>
+            <ul className="space-y-2">
+              <li><Link href={`${prefix}/`} className="hover:text-zinc-300 transition">{isHant ? "安全入口" : "安全入口"}</Link></li>
+              <li><Link href={`${prefix}/zhuce/`} className="hover:text-zinc-300 transition">{isHant ? "查看訪問入口" : "查看访问入口"}</Link></li>
+              <li><Link href={`${prefix}/denglu/`} className="hover:text-zinc-300 transition">{isHant ? "安全登錄" : "安全登录"}</Link></li>
+              <li><Link href={`${prefix}/xiazai/`} className="hover:text-zinc-300 transition">{isHant ? "下載指引" : "下载指引"}</Link></li>
+              <li><Link href={`${prefix}/privacy-policy/`} className="hover:text-zinc-300 transition">{isHant ? "隱私說明" : "隐私说明"}</Link></li>
+              <li><Link href={`${prefix}/#directory`} className="hover:text-zinc-300 transition">{isHant ? "教程中心" : "教程中心"}</Link></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-3 space-y-3">
+            <h4 className="text-zinc-400 font-semibold text-xs">{isHant ? "熱門專題" : "热门专题"}</h4>
+            <ul className="grid grid-cols-2 gap-x-2 gap-y-2">
+              <li><Link href={`${prefix}/app/`} className="hover:text-zinc-300 transition">{isHant ? "手機APP" : "手机APP"}</Link></li>
+              <li><Link href={`${prefix}/diannao/`} className="hover:text-zinc-300 transition">{isHant ? "電腦版" : "电脑版"}</Link></li>
+              <li><Link href={`${prefix}/anzhuangbao/`} className="hover:text-zinc-300 transition">{isHant ? "安裝包" : "安装包"}</Link></li>
+              <li><Link href={`${prefix}/pingguo/`} className="hover:text-zinc-300 transition">{isHant ? "蘋果安裝" : "苹果安装"}</Link></li>
+              <li><Link href={`${prefix}/wangye/`} className="hover:text-zinc-300 transition">{isHant ? "網頁版" : "网页版"}</Link></li>
+              <li><Link href={`${prefix}/anzhuo/`} className="hover:text-zinc-300 transition">{isHant ? "安卓下載" : "安卓下载"}</Link></li>
+              <li><Link href={`${prefix}/guanwang/`} className="hover:text-zinc-300 transition">{isHant ? "安全通道" : "安全通道"}</Link></li>
+              <li><Link href={`${prefix}/zhongwen/`} className="hover:text-zinc-300 transition">{isHant ? "中文版" : "中文版"}</Link></li>
+            </ul>
+          </div>
+
+          <div className="md:col-span-3 space-y-3">
+            <h4 className="text-zinc-400 font-semibold text-xs">{isHant ? "友情連結" : "友情链接"}</h4>
+            <ul className="space-y-2">
+              <li>
+                <a href="https://oyweb.net/" target="_blank" rel="noopener" className="text-emerald-400 font-bold hover:underline transition">
+                  {isHant ? "歐易web 官方網頁版入口 (oyweb.net)" : "欧易web 官方网页版入口 (oyweb.net)"}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        {/* Risk warning */}
+        <div className="p-4 bg-zinc-900/40 border border-zinc-900/60 rounded-xl space-y-2">
+          <p className="leading-relaxed text-[11px] text-zinc-650">
+            {isHant 
+              ? "數字資產投資（加密貨幣/合約槓桿）含有高波動與高風險。本站僅作為第三方獨立信息與粉絲指南頁提供內容整理，不提供交易、登錄、充值、提現、託管或帳戶服務，也不會要求您在本站輸入帳號密碼、驗證碼、助記詞或資金信息。市場有風險，請自行判斷。"
+              : "数字资产投资（加密货币/合约杠杆）含有高波动与高风险。本站仅作为第三方独立信息与粉丝指南页提供内容整理，不提供交易、登录、充值、提现、托管或账户服务，也不会要求您在本站输入账号密码、验证码、助记词或资金信息。市场有风险，请自行判断。"}
+          </p>
+        </div>
+
+        {/* Bottom copyright brand & backlinks */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-600">
+          <div>
+            <p>
+              © {new Date().getFullYear()}{" "}
+              <span>OKX</span>. All rights reserved.
+            </p>
+          </div>
+
+          {/* Support badge & oyweb.net backlink */}
+          <div className="flex items-center gap-4 flex-wrap">
+            <span className="flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> 
+              <span>{isHant ? "SSL 256 位銀行級信源加密保護" : "SSL 256 位银行级信源加密保护"}</span>
+            </span>
+            <span className="text-zinc-700">|</span>
+            <a
+              href="https://oyweb.net/"
+              target="_blank"
+              rel="noopener"
+              className="text-emerald-400 font-bold hover:underline transition"
+            >
+              {isHant ? "歐易web 官方網頁版入口 (oyweb.net)" : "欧易web 官方网页版入口 (oyweb.net)"}
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+  );
 }
