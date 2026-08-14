@@ -122,7 +122,7 @@ export default function Header() {
                 {/* Desktop Actions */}
                 <div className="hidden md:flex items-center gap-3">
                     <GatewayTrigger className="text-sm font-medium text-slate-400 hover:text-white transition-colors flex items-center gap-1">
-                        访问官网 <span className="text-blue-400">→</span>
+                        访问平台 <span className="text-blue-400">→</span>
                     </GatewayTrigger>
                     <GatewayTrigger
                         className="btn-primary px-5 py-2 rounded-lg text-sm font-semibold"
@@ -199,7 +199,7 @@ export default function Header() {
                         )}
                         <div className="pt-4 mt-2 grid grid-cols-2 gap-3" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
                             <GatewayTrigger className="py-3 rounded-xl text-center text-sm font-medium text-white transition-colors [background:rgba(37,99,235,0.15)] [border:1px_solid_rgba(37,99,235,0.3)]">
-                                访问官网
+                                访问平台
                             </GatewayTrigger>
                             <GatewayTrigger
                                 className="btn-primary py-3 rounded-xl text-center text-sm font-semibold text-white"

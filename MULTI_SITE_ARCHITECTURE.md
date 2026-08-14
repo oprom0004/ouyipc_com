@@ -23,7 +23,7 @@
 *   **不良示范（原代码）**：
     ```tsx
     <span className="text-blue-300">
-      欧意 · 官方中文入口    // <--- 典型的 Hardcode 汉字
+      欧意 · 安全中文入口    // <--- 典型的 Hardcode 汉字
     </span>
     ```
 *   **改造思路**：
@@ -51,7 +51,7 @@
 构建站群前，需要全局排查以下可能写死的地方：
 *   **布局与导航**：直接在 `layout.tsx` 编写的 `<title>` 标签或 meta 描述，以及 Footer 中写死的版权年份（`Copyright © 2024 欧意`）。
 *   **静态资源引用**：组件中指向 public 资源的绝对路径图片链接，例如 `<img src="/okx-logo.png" />`，应改为读取配置中的 `config.assets.logoPath`。
-*   **社交媒体与外部链接**：直接写死在按钮上的官方微博/Twitter 跳转链接。
+*   **社交媒体与外部链接**：直接写死在按钮上的安全微博/Twitter 跳转链接。
 
 在第一阶段“抽离文案”完成后，所有纯粹的展现组件都将转变为无状态的“渲染引擎”。
 
@@ -98,8 +98,8 @@
 {
   "siteId": "oyiguangwang.com",
   "seo": {
-    "title": "欧易官网 - 全球领先的数字资产交易平台",
-    "description": "欧易(OKX)官方网站...",
+    "title": "欧易平台 - 全球领先的数字资产交易平台",
+    "description": "欧易(OKX)OKX平台...",
     "keywords": "欧易, oyiguangwang"
   },
   "theme": {
@@ -112,7 +112,7 @@
     "footerStyle": "standard"
   },
   "content": {
-    "heroBadgeText": "欧易 · 官方中文入口",
+    "heroBadgeText": "欧易 · 安全中文入口",
     "heroTitle": "开启您的数字资产之旅",
     "downloadLink": "https://..."
   }

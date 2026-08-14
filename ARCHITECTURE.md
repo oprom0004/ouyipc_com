@@ -69,7 +69,7 @@ src/content/zh-CN/
   "brandFull": "欧意(OKX)",
   "domain": "https://ouyijiaoyisuo.org",
   "tagline": "...",
-  "primaryCta": { "label": "进入欧意官网", "href": "/ouyi-zhuce" },
+  "primaryCta": { "label": "进入欧意平台", "href": "/ouyi-zhuce" },
   "nav": [...],       ← Header 菜单栏读取
   "footerNav": {...}, ← Footer 链接读取
   "quickLinks": {...} ← 首页快速入口参考
@@ -170,7 +170,7 @@ function generateStaticParams() {
 
 **在 JSON 中的写法：**
 ```json
-"title": "{brand}APP下载 | {brand}(OKX)安卓/iOS最新官方安装包 {year}"
+"title": "{brand}APP下载 | {brand}(OKX)安卓/iOS最新安全安装包 {year}"
 ```
 
 **效果**：每次构建自动生成正确年份，换品牌时无需批量改 JSON。
@@ -224,7 +224,7 @@ function generateStaticParams() {
 |------|-----|
 | 主词（H1/Title 核心） | 欧意 |
 | 同义词（正文自然散布） | OKX、殴易、OKEX、欧易、易欧 |
-| 长尾词（FAQ/H3） | 欧意APP下载、欧意注册、欧意官网访问等 |
+| 长尾词（FAQ/H3） | 欧意APP下载、欧意注册、欧意平台访问等 |
 
 ### 内容写作原则
 

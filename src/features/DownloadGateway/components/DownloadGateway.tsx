@@ -153,7 +153,7 @@ export default function DownloadGateway({
                             <div className={styles.groupButtons}>
                                 <button className={`${styles.actionBtn} ${styles.btnRecommend}`} onClick={() => handleDownload(config.web.china, 'link')}>
                                     <span className={styles.btnIcon}><IconWeb /></span>
-                                    <span className={styles.btnMain}>访问官网</span>
+                                    <span className={styles.btnMain}>访问平台</span>
                                     <span className={styles.btnTag}>🔥</span>
                                     <span className={styles.btnSub}>推荐线路 · 高速稳定</span>
                                 </button>
@@ -161,12 +161,12 @@ export default function DownloadGateway({
                                     <span className={styles.btnIcon}><IconAndroid /></span>
                                     <span className={styles.btnMain}>安卓下载</span>
                                     <span className={styles.btnTag}>🔥</span>
-                                    <span className={styles.btnSub}>官方APK安装包</span>
+                                    <span className={styles.btnSub}>安全APK安装包</span>
                                 </button>
                                 <button className={styles.actionBtn} onClick={() => handleDownload(config.web.china, 'link')}>
                                     <span className={styles.btnIcon}><IconApple /></span>
                                     <span className={styles.btnMain}>苹果下载</span>
-                                    <span className={styles.btnSub}>需先官网注册或登录</span>
+                                    <span className={styles.btnSub}>需先平台注册或登录</span>
                                 </button>
                             </div>
                         </div>
@@ -203,7 +203,7 @@ export default function DownloadGateway({
                                 <div className={styles.groupButtons} style={{ marginTop: '10px' }}>
                                     <button className={styles.actionBtn} onClick={() => handleDownload(config.web.global, 'link')}>
                                         <span className={styles.btnIcon}><IconWeb /></span>
-                                        <span className={styles.btnMain}>访问官网</span>
+                                        <span className={styles.btnMain}>访问平台</span>
                                         <span className={styles.btnSub}>国际版 / 备用</span>
                                     </button>
                                     <button className={styles.actionBtn} onClick={() => handleDownload(config.android.global, 'download')}>
@@ -214,7 +214,7 @@ export default function DownloadGateway({
                                     <button className={styles.actionBtn} onClick={() => handleDownload(config.web.global, 'link')}>
                                         <span className={styles.btnIcon}><IconApple /></span>
                                         <span className={styles.btnMain}>苹果下载</span>
-                                        <span className={styles.btnSub}>需先官网注册或登录</span>
+                                        <span className={styles.btnSub}>需先平台注册或登录</span>
                                     </button>
                                 </div>
                             )}

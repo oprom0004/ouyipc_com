@@ -141,7 +141,7 @@ export function SubPageLayout({ content, ctaHref = "/zhuce", breadcrumbs, slug }
                         <div className="p-6 rounded-2xl bg-blue-600/10 border border-blue-500/20">
                             <p className="text-blue-200 text-xs font-bold mb-2">安全提醒</p>
                             <p className="text-slate-400 text-xs leading-relaxed">
-                                请务必点击本站同步的官方分发链接获取客户端，核对数字签名以确保资金安全。
+                                请务必点击本站同步的安全分发链接获取客户端，核对数字签名以确保资金安全。
                             </p>
                         </div>
                     </div>

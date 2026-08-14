@@ -11,7 +11,7 @@ const sections = [
         title: '安卓版',
         icon: Smartphone,
         links: [
-            { href: '/app/anzhuo', label: '欧易安卓版', sub: '官方正版 · 极速安装', icon: Download, accent: '#22c55e' },
+            { href: '/app/anzhuo', label: '欧易安卓版', sub: '正版安装 · 极速安装', icon: Download, accent: '#22c55e' },
         ],
     },
     {
@@ -31,7 +31,7 @@ const sections = [
             { href: '/qianbao', label: 'Web3钱包', sub: '去中心化 · 多链聚合', icon: Wallet, accent: '#f59e0b' },
             { href: '/zhuce', label: '注册领奖励', sub: '新手专享 · 先领后投', icon: UserPlus, accent: '#34d399' },
             { href: '/okb', label: 'OKB生态', sub: '平台币 · X Layer', icon: Coins, accent: '#fb923c' },
-            { href: '/jiaoyisuo', label: '交易所入口', sub: '平台介绍 · 官方入口直达', icon: Building2, accent: '#94a3b8' },
+            { href: '/jiaoyisuo', label: '交易所入口', sub: '平台介绍 · 网址入口直达', icon: Building2, accent: '#94a3b8' },
         ],
     },
 ];

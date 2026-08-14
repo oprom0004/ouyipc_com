@@ -32,7 +32,7 @@ export const FALLBACK_DATA: GatewayConfig = {
     web: {
         china: 'https://www.bjwebptyiou.com/zh-hans/join?channelId=ACE528829',
         global: 'https://www.okx.com/cn/join?channelId=ACE528829',
-        china_label: '访问官网（推荐线路）',
-        global_label: '访问官网（国际线路）'
+        china_label: '访问平台（推荐线路）',
+        global_label: '访问平台（国际线路）'
     }
 };

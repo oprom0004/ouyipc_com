@@ -18,7 +18,7 @@ const LINK_MAP: Record<string, string> = {
   "打不开": "/ouyi-dabukai",
   "安装": "/ouyi-pc-xiazai-anzhuang",
   "最新版": "/ouyi-pc-xiazai-zuixinban",
-  "官网": "/diannaoban-xiazai-guanwang",
+  "平台": "/diannaoban-xiazai-guanwang",
   "下载方法": "/ouyi-pc-xiazai-fangfa",
 };
 

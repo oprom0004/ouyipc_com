@@ -25,8 +25,8 @@ export default function Footer({ locale = 'zh' }: FooterProps) {
             </div>
             <p className="max-w-md text-zinc-500 leading-normal">
               {isHant 
-                ? "本站為 OKX / 歐意用戶整理的非官方粉絲指南網站，提供訪問入口整理、客戶端下載指引與常見使用教程。本站不隸屬於 OKX 平台。"
-                : "本站为 OKX / 欧易用户整理的非官方粉丝指南网站，提供访问入口整理、客户端下载指引与常见使用教程。本站不隶属于 OKX 平台。"}
+                ? "本站為 OKX / 歐意用戶整理的非安全粉絲指南網站，提供訪問入口整理、客戶端下載指引與常見使用教程。本站不隸屬於 OKX 平台。"
+                : "本站为 OKX / 欧易用户整理的非安全粉丝指南网站，提供访问入口整理、客户端下载指引与常见使用教程。本站不隶属于 OKX 平台。"}
             </p>
           </div>
 
@@ -57,16 +57,16 @@ export default function Footer({ locale = 'zh' }: FooterProps) {
           </div>
 
           <div className="md:col-span-3 space-y-3">
-            <h4 className="text-zinc-400 font-semibold text-xs">{isHant ? "友情連結" : "友情链接"}</h4>
+            <h4 className="text-zinc-400 font-semibold text-xs">{isHant ? "常用網址入口" : "常用网址入口"}</h4>
             <ul className="space-y-2">
               <li>
                 <a href="https://ouxpc.com/" target="_blank" rel="noopener" className="text-emerald-400 font-bold hover:underline transition">
-                  {isHant ? "歐意 OKX 官方全功能導航 (ouxpc.com)" : "欧意 OKX 官方全功能导航 (ouxpc.com)"}
+                  {isHant ? "歐意 OKX 網址入口導航 (ouxpc.com)" : "欧意 OKX 网址入口导航 (ouxpc.com)"}
                 </a>
               </li>
               <li>
                 <a href="https://oyweb.net/" target="_blank" rel="noopener" className="text-emerald-400 font-bold hover:underline transition">
-                  {isHant ? "歐易web 官方網頁版 (oyweb.net)" : "欧易web 官方网页版 (oyweb.net)"}
+                  {isHant ? "歐易 OKX 網頁版登錄入口 (oyweb.net)" : "欧易 OKX 网页版登录入口 (oyweb.net)"}
                 </a>
               </li>
             </ul>
