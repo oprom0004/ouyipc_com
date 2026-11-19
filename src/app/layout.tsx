@@ -40,6 +40,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN">
+      <head>
+        <script defer src="https://umamimy.vercel.app/script.js" data-website-id="54d9ce46-8453-42cf-bdc9-82f945e64358" />
+      </head>
       <body className="antialiased font-sans" suppressHydrationWarning>
         <Providers>
           <Header />
